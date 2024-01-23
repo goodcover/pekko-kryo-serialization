@@ -7,7 +7,7 @@ import sbtrelease.ReleasePlugin.autoImport.ReleaseTransformations._
 val mainScalaVersion = "3.3.1"
 val secondaryScalaVersions = Seq("2.12.18", "2.13.12")
 
-val scalaKryoVersion = "1.0.2"
+val scalaKryoVersion = "1.0.3"
 val defaultPekkoVersion = "1.0.1"
 val pekkoVersion =
   System.getProperty("pekko.build.version", defaultPekkoVersion) match {
@@ -61,7 +61,7 @@ lazy val akkaCompat: Project = Project("pekko-kryo-serialization-akka-compat", f
 
 // Dependencies
 lazy val coreDeps = Seq(
-  "io.altoo" %% "scala-kryo-serialization" % scalaKryoVersion,
+  "com.goodcover.kryo" %% "scala-kryo-serialization" % scalaKryoVersion,
   "org.apache.pekko" %% "pekko-actor" % pekkoVersion,
   "org.agrona" % "agrona" % "1.15.1", // should match pekko-remote/aeron inherited version
   "org.lz4" % "lz4-java" % "1.8.0",
@@ -80,7 +80,7 @@ lazy val testingDeps = Seq(
 
 // Settings
 lazy val commonSettings: Seq[Setting[?]] = Seq(
-  organization := "io.altoo")
+  organization := "com.goodcover.kryo")
 
 lazy val moduleSettings: Seq[Setting[?]] = commonSettings ++ noReleaseInSubmoduleSettings ++ scalacBasicOptions ++ scalacStrictOptions ++ scalacLintOptions ++ Seq(
   scalaVersion := mainScalaVersion,
