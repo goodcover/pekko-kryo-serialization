@@ -5,7 +5,7 @@ import com.esotericsoftware.kryo.kryo5.Kryo
 import com.esotericsoftware.kryo.kryo5.io.{Input, Output}
 import com.esotericsoftware.kryo.kryo5.util.MapReferenceResolver
 import io.altoo.serialization.kryo.scala.serializer.SubclassResolver
-import org.objenesis.strategy.StdInstantiatorStrategy
+import com.esotericsoftware.kryo.kryo5.objenesis.strategy.StdInstantiatorStrategy
 import org.scalatest.Outcome
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers

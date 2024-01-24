@@ -8,7 +8,7 @@ import io.altoo.serialization.kryo.scala.{DefaultKeyProvider, KryoCryptographer}
 import io.altoo.serialization.kryo.scala.serializer.ScalaKryo
 import org.apache.pekko.actor.ExtendedActorSystem
 import org.apache.pekko.serialization.{ByteBufferSerializer, SerializationExtension}
-import org.objenesis.strategy.StdInstantiatorStrategy
+import com.esotericsoftware.kryo.kryo5.objenesis.strategy.StdInstantiatorStrategy
 
 import java.nio.ByteBuffer
 import scala.collection.immutable.HashMap
