@@ -1,6 +1,6 @@
 package io.altoo.serialization.kryo.pekko
 
-import com.esotericsoftware.kryo.util.*
+import com.esotericsoftware.kryo.kryo5.util.*
 import com.typesafe.config.{Config, ConfigFactory}
 import io.altoo.serialization.kryo.pekko.serializer.scala.*
 import io.altoo.serialization.kryo.pekko.testkit.{AbstractPekkoTest, KryoSerializationTesting}
